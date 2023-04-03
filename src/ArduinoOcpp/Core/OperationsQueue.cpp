@@ -88,7 +88,7 @@ void OperationsQueue::pop_front() {
                 fetched.reset();
             }
 
-            if (!fetched->isFullyConfigured()) {
+            else if (!fetched->isFullyConfigured()) {
                 AO_DBG_ERR("stored op initialization failure");
                 fetched.reset();
             }
